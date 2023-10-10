@@ -40,10 +40,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h3>Join any of these games 💰</h3>
+      {activeGames.length > 0 && <h3>Join any of these games 💰</h3>}
       <br />
       <div className={styles.cards_container}>
-        {activeGames &&
+        {activeGames.length > 0 ? (
           activeGames.map((game: any, index: number) => (
             <GameCard
               key={index}
@@ -51,7 +51,10 @@ export default function Home() {
               index={index}
               isConnected={isConnected}
             />
-          ))}
+          ))
+        ) : (
+          <div>No game yet, start a game now? ↗️</div>
+        )}
       </div>
     </div>
   );

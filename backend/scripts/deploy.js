@@ -14,16 +14,16 @@ async function main() {
 
     console.log(`FoMoMe address: ${fomome.address}`);
 
-    const entryPrice = ethers.utils.parseUnits("1", "ether");
-    await fomome.connect(player1).start(entryPrice, { value: entryPrice });
-    await fomome.connect(player2).start(entryPrice, { value: entryPrice });
-    await fomome.connect(player3).start(entryPrice, { value: entryPrice });
-    await fomome.connect(player4).start(entryPrice, { value: entryPrice });
-    await fomome.connect(player5).start(entryPrice, { value: entryPrice });
+    // const entryPrice = ethers.utils.parseUnits("1", "ether");
+    // await fomome.connect(player1).start(entryPrice, { value: entryPrice });
+    // await fomome.connect(player2).start(entryPrice, { value: entryPrice });
+    // await fomome.connect(player3).start(entryPrice, { value: entryPrice });
+    // await fomome.connect(player4).start(entryPrice, { value: entryPrice });
+    // await fomome.connect(player5).start(entryPrice, { value: entryPrice });
 
-    const hosts = await fomome.getActiveHosts();
-    console.log("Active hosts:", hosts);
-    console.log("Game #1", await fomome.getActiveGame(hosts[1]));
+    // const hosts = await fomome.getActiveHosts();
+    // console.log("Active hosts:", hosts);
+    // console.log("Game #1", await fomome.getActiveGame(hosts[1]));
 
     const directoryPath = path.join(__dirname, "../../frontend/data");
     const jsonFilePath = path.join(directoryPath, "deployed.json");
