@@ -167,7 +167,7 @@ export default function Navbar() {
           <h2 className={styles.modalTitle}>FOMO and win big!</h2>
           <p className={styles.modalDescription}>New game</p>
           <form onSubmit={startGame}>
-            <label>Entry Price</label>
+            <label>Entry fee</label>
             <input
               type="number"
               value={entryPrice}
@@ -184,6 +184,9 @@ export default function Navbar() {
                 *Per 10 minutes extension
               </i>
             </small>
+            <p>
+              Now <i>{moment().format("yyyy/MM/DD hh:mm A")}</i>
+            </p>
             <p>
               End at ~
               <i>{moment().add(1, "hour").format("yyyy/MM/DD hh:mm A")}</i>
